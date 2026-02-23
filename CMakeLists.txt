@@ -17,10 +17,17 @@ ament_target_dependencies(keyboard_node
   sensor_msgs
 )
 
+
 install(
   TARGETS keyboard_node
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(
+  DIRECTORY launch_ur_system
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 
 if(BUILD_TESTING)
